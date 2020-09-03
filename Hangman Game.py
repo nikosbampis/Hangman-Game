@@ -7,7 +7,7 @@ result = 0
 for char in wordHangman:
     result +=1
 
-#print(result).
+#print(result)..
 
 
 
