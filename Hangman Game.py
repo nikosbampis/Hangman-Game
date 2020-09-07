@@ -3,7 +3,7 @@ import string
 #Type word
 #wordHangman = input(str("Give word for Hangman:"))
 wordHangman = "aesttttt"
-#print(wordHangman)
+
 wordHangmanList = list(wordHangman)
 secretWord = list(wordHangman)
 
@@ -27,7 +27,6 @@ count_letters = list(range(1, len(secretWord)))
 for char in count_letters:
     secretWord[char] = "_"
 
-#print(secretWord)
 
 
 for i in range(8):
@@ -45,11 +44,10 @@ for i in range(8):
         if lowerc == inputLetter:
             letters.remove(lowerc)
     #print(list((range(0, len(wordHangmanList)))))
-    #exit()
     #print(secretWord)
 
 
-    #Add letter to secret word if it correct
+    #Add letter(s) to secret word if it correct
     for letter in wordHangmanList:
         if letter == inputLetter:
             wordIdx = wordHangmanList.index(letter)
