@@ -53,12 +53,6 @@ for i in range(8):
     print(str_join.join(letters))
     letters = list(letters)
 
-    # Add letter(s) to secret word if it correct
-    # for letter in wordHangmanList:
-    #     if letter == inputLetter:
-    #         wordIdx = wordHangmanList.index(letter)
-    #         secretWord[wordIdx] = inputLetter
-
     if inputLetter in wordHangman:
         wordIdx = list_duplicates_of(wordHangman, inputLetter)
         for i in wordIdx:
