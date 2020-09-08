@@ -14,10 +14,6 @@ def list_duplicates_of(seq,item):
     return locs
 
 
-# print(list_duplicates_of(source, 'B'))
-# exit()
-# Type word
-# wordHangman = input(str("Give word for Hangman:"))
 wordHangman = "abbbsfsagcc"
 print(wordHangman)
 
@@ -29,22 +25,14 @@ result = 0
 for char in wordHangman:
     result += 1
 
-# print(result)...
-
 # Alphabetic letters
 letters = string.ascii_lowercase
 letters = list(letters)
-# print(letters)
-
-
-count_letters = list(range(1, len(secretWord)))
-
 
 # Replace all letters except the first one with _
+count_letters = list(range(1, len(secretWord)))
 for char in count_letters:
     secretWord[char] = "_"
-
-
 
 for i in range(8):
     inputLetter = input(str("Give Letter: "))
@@ -60,12 +48,10 @@ for i in range(8):
     for lowerc in letters:
         if lowerc == inputLetter:
             letters.remove(lowerc)
-    # print(list((range(0, len(wordHangmanList)))))
-    # print(secretWord)
+
     str_join = ","
     print(str_join.join(letters))
     letters = list(letters)
-
 
     # Add letter(s) to secret word if it correct
     # for letter in wordHangmanList:
@@ -78,19 +64,9 @@ for i in range(8):
         for i in wordIdx:
             secretWord[i] = inputLetter
 
-
     word_join = ""
     print(word_join.join(secretWord))
-    #print(wordHangman)
-
 
     if secretWord == wordHangmanList:
         print("Success")
         break
-
-
-    # str = ""
-    # print(str.join(secretWord))
-
-
-# print(letters)
